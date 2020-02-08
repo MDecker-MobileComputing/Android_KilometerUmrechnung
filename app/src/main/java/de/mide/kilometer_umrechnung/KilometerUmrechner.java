@@ -42,7 +42,7 @@ public class KilometerUmrechner {
      */
     public KilometerUmrechner(double kilometer) throws KilometerException {
 
-        if (_kilometer <= 0.0) {
+        if (kilometer <= 0.0) {
 
             throw new KilometerException("Unzulässiger Kilometer-Wert " + kilometer);
         }

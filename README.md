@@ -8,9 +8,7 @@ The purpose of the app is to demonstrate different approaches for automatic test
 
 # Screenshot #
 
-![Screenshot 1](screenshot_1.png)
-
-![Screenshot 2](screenshot_2.png)
+![Screenshot 1](screenshot_1.png)   ![Screenshot 2](screenshot_2.png)
 
 <br>
 
