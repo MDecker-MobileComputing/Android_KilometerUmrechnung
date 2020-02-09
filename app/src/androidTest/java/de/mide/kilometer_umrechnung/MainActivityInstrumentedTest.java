@@ -11,16 +11,13 @@ import static androidx.test.espresso.matcher.ViewMatchers.withSubstring;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 
-import android.content.Context;
 import androidx.test.rule.ActivityTestRule;
 
-import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static org.junit.Assert.*;
 
 
 /**
@@ -28,6 +25,7 @@ import static org.junit.Assert.*;
  *
  * @link https://developer.android.com/training/testing/espresso
  * @link https://developer.android.com/reference/android/support/test/espresso/matcher/ViewMatchers
+ * @link https://developer.android.com/reference/androidx/test/espresso/action/ViewActions
  */
 @RunWith(AndroidJUnit4.class)
 public class MainActivityInstrumentedTest {
@@ -62,7 +60,7 @@ public class MainActivityInstrumentedTest {
         // Auf Button "Umrechnen" klicken
         onView( withId(R.id.umrechnenButton) ).perform( click() );
 
-        // Kontrollieren, ob Dialog angezeigt wird
+        // Kontrollieren, ob Dialog mit Ergebnis angezeigt wird
         onView( withText("Ergebnis") ).check( matches(isDisplayed()) );
 
         // Ergebnis-Wert nur auf erste Nachkommastelle prüfen
@@ -75,6 +73,26 @@ public class MainActivityInstrumentedTest {
 
         // Dialog muss jetzt verschwunden sein
         onView( withText("Ergebnis") ).check( doesNotExist() );
+    }
+
+    /**
+     * Verhalten bei Klick auf Button "Umrechnen" prüfen wenn nichts eingegeben.
+     */
+    @Test
+    public void leereEingabe() {
+
+        onView( withId(R.id.umrechnenButton) ).perform( click() );
+
+        // Kontrollieren, ob Dialog angezeigt wird
+        onView( withText("Ungültige Eingabe") ).check( matches(isDisplayed()) );
+
+
+        // Dialog durch Klick auf Button "Zur Kenntnis genommen" schließen
+        onView( withText("Zur Kenntnis genommen") ).perform( click() );
+
+
+        // Dialog muss jetzt verschwunden sein
+        onView( withText("Ungültige Eingabe") ).check( doesNotExist() );
     }
 
 }
