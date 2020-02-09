@@ -65,16 +65,6 @@ public class KilometerUmrechnerTest {
         double ergebnis = _cut.getMeilenEnglisch();
 
         Assert.assertTrue( Math.abs(ergebnis - erwartetesErgebnis) < 0.01 );
-
-
-        // selbes mit String-Konstruktor
-
-        _cut = new KilometerUmrechner(eingabeKilometer + "");
-
-        // Aufruf Methode under Test
-        ergebnis = _cut.getMeilenEnglisch();
-
-        Assert.assertTrue( Math.abs(ergebnis - erwartetesErgebnis) < 0.01 );
     }
 
 
@@ -96,16 +86,6 @@ public class KilometerUmrechnerTest {
         double ergebnis = _cut.getMeilenNautisch();
 
         Assert.assertTrue( Math.abs(ergebnis - erwartetesErgebnis) < 0.01 );
-
-
-        // selbes mit String-Konstruktor
-
-        _cut = new KilometerUmrechner(eingabeKilometer + "");
-
-        // Aufruf Methode under Test
-        ergebnis = ergebnis = _cut.getMeilenNautisch();
-
-        Assert.assertTrue( Math.abs(ergebnis - erwartetesErgebnis) < 0.01 );
     }
 
 
@@ -125,16 +105,6 @@ public class KilometerUmrechnerTest {
 
         // Aufruf Methode under Test
         double ergebnis = _cut.getMeilenChinesisch();
-
-        Assert.assertTrue( Math.abs(ergebnis - erwartetesErgebnis) < 0.01 );
-
-
-        // selbes mit String-Konstruktor
-
-        _cut = new KilometerUmrechner(eingabeKilometer + "");
-
-        // Aufruf Methode under Test
-        ergebnis = ergebnis = _cut.getMeilenChinesisch();
 
         Assert.assertTrue( Math.abs(ergebnis - erwartetesErgebnis) < 0.01 );
     }
