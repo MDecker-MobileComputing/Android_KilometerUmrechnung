@@ -60,7 +60,6 @@ public class KilometerUmrechnerTest {
 
         _cut = new KilometerUmrechner(eingabeKilometer + "");
 
-
         // Aufruf Methode under Test
         double ergebnis = _cut.getMeilenEnglisch();
 
@@ -81,7 +80,6 @@ public class KilometerUmrechnerTest {
 
         _cut = new KilometerUmrechner(eingabeKilometer + "");
 
-
         // Aufruf Methode under Test
         double ergebnis = _cut.getMeilenNautisch();
 
@@ -101,7 +99,6 @@ public class KilometerUmrechnerTest {
         final double erwartetesErgebnis = 12.3 * 0.5;
 
         _cut = new KilometerUmrechner(eingabeKilometer + "");
-
 
         // Aufruf Methode under Test
         double ergebnis = _cut.getMeilenChinesisch();
