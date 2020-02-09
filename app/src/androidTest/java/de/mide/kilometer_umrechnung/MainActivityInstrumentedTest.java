@@ -19,7 +19,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 
-
 /**
  * Instrumented Tests (d.h. laufen im Emulator oder auf Gerät) mit "Espresso".
  *
@@ -47,7 +46,7 @@ public class MainActivityInstrumentedTest {
      * In dieser Testmethode werden 10.5km in englische Meilen umgerechnet.
      */
     @Test
-    public void kilometer2seemeilen() {
+    public void kilometer2englischeMeilen() {
 
         // Umzurechnenden Kilometerwert eintragen
         onView( withId(R.id.kilometerInput) ).perform(
@@ -74,6 +73,73 @@ public class MainActivityInstrumentedTest {
         // Dialog muss jetzt verschwunden sein
         onView( withText("Ergebnis") ).check( doesNotExist() );
     }
+
+
+    /**
+     * In dieser Testmethode werden 10.5km in Seemeilen (nautische Meilen).
+     */
+    @Test
+    public void kilometer2seemeilen() {
+
+        // Umzurechnenden Kilometerwert eintragen
+        onView( withId(R.id.kilometerInput) ).perform(
+                typeText("10.5"), closeSoftKeyboard()
+        );
+
+        // Auf RadioButton mit Zieleinheit "englische Meilen" klicken
+        onView( withId(R.id.radio_button_meileNautisch) ).perform( click() );
+
+        // Auf Button "Umrechnen" klicken
+        onView( withId(R.id.umrechnenButton) ).perform( click() );
+
+        // Kontrollieren, ob Dialog mit Ergebnis angezeigt wird
+        onView( withText("Ergebnis") ).check( matches(isDisplayed()) );
+
+        // Ergebnis-Wert nur auf erste Nachkommastelle prüfen
+        onView( withSubstring( "19.4") ).check( matches(isDisplayed()) );
+
+
+        // Dialog durch Klick auf Button "Zur Kenntnis genommen" schließen
+        onView( withText("Zur Kenntnis genommen") ).perform( click() );
+
+
+        // Dialog muss jetzt verschwunden sein
+        onView( withText("Ergebnis") ).check( doesNotExist() );
+    }
+
+
+    /**
+     * In dieser Testmethode werden 10.5km in chinesische Meilen (Li).
+     */
+    @Test
+    public void kilometer2chinesischeMeilen() {
+
+        // Umzurechnenden Kilometerwert eintragen
+        onView( withId(R.id.kilometerInput) ).perform(
+                typeText("10.5"), closeSoftKeyboard()
+        );
+
+        // Auf RadioButton mit Zieleinheit "englische Meilen" klicken
+        onView( withId(R.id.radio_button_meileChinesisch) ).perform( click() );
+
+        // Auf Button "Umrechnen" klicken
+        onView( withId(R.id.umrechnenButton) ).perform( click() );
+
+        // Kontrollieren, ob Dialog mit Ergebnis angezeigt wird
+        onView( withText("Ergebnis") ).check( matches(isDisplayed()) );
+
+        // Ergebnis-Wert nur auf erste Nachkommastelle prüfen
+        onView( withSubstring( "5.2") ).check( matches(isDisplayed()) );
+
+
+        // Dialog durch Klick auf Button "Zur Kenntnis genommen" schließen
+        onView( withText("Zur Kenntnis genommen") ).perform( click() );
+
+
+        // Dialog muss jetzt verschwunden sein
+        onView( withText("Ergebnis") ).check( doesNotExist() );
+    }
+
 
     /**
      * Verhalten bei Klick auf Button "Umrechnen" prüfen wenn nichts eingegeben.
