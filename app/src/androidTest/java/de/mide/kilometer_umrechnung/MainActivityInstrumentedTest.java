@@ -65,8 +65,8 @@ public class MainActivityInstrumentedTest {
         // Kontrollieren, ob Dialog angezeigt wird
         onView( withText("Ergebnis") ).check( matches(isDisplayed()) );
 
-        // Ergebnis-Wert nur auf erste zwei Nachkommastellen prüfen
-        onView( withSubstring( "16.89") ).check( matches(isDisplayed()) );
+        // Ergebnis-Wert nur auf erste Nachkommastelle prüfen
+        onView( withSubstring( "16.9") ).check( matches(isDisplayed()) );
 
 
         // Dialog durch Klick auf Button "Zur Kenntnis genommen" schließen

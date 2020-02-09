@@ -1,6 +1,9 @@
 package de.mide.kilometer_umrechnung;
 
 
+import java.text.DecimalFormat;
+
+
 /**
  * Diese Klasse beinhaltet die Logik für die eigentliche Umrechnung von Kilometern
  * in Meilen.
@@ -94,7 +97,7 @@ public class KilometerUmrechner {
      */
     public String getMeilenEnglischAlsString() {
 
-        return getMeilenEnglisch() + " engl. Meilen";
+        return runden( getMeilenEnglisch() ) + " engl. Meilen";
     }
 
 
@@ -116,7 +119,7 @@ public class KilometerUmrechner {
      */
     public String getMeilenNautischAlsString() {
 
-        return getMeilenNautisch() + " nautische Meilen";
+        return runden( getMeilenNautisch() ) + " nautische Meilen";
     }
 
 
@@ -130,6 +133,7 @@ public class KilometerUmrechner {
         return _kilometer * UMRECHNUNGSFAKTOR_MEILEN_CHINESISCH;
     }
 
+
     /**
      * Umrechnung in chinesische Meilen.
      *
@@ -137,7 +141,21 @@ public class KilometerUmrechner {
      */
     public String getMeilenChinesischAlsString() {
 
-        return getMeilenChinesisch() + " chinesische Meilen";
+        return runden ( getMeilenChinesisch() ) + " chinesische Meilen";
+    }
+
+
+    /**
+     * Ergebnis in String umwandeln und Nachkommastellen abschneiden.
+     * Beispiel: meilen=19.312128, Ergebnis: 19.31
+     *
+     * @param meilen Ergebnis, das in String umzuwandeln
+     *
+     * @return  {@code meilen} als String, ggf. Nachkommastellen abgeschnitten.
+     */
+    private String runden(double meilen) {
+
+        return String.format("%.2f", meilen);
     }
 
 }

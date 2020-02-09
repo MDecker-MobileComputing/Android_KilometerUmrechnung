@@ -173,34 +173,31 @@ public class KilometerUmrechnerTest {
 
         final double eingabeKilometer = 123.4;
 
-        final double erwartetesErgebnisEnglisch   = eingabeKilometer * 1.609344;
-        final double erwartetesErgebnisNautisch   = eingabeKilometer * 1.852;
-        final double erwartetesErgebnisChinesisch = eingabeKilometer * 0.5;
-
         double ergebnisDouble = 0.0;
         String ergebnisString = "";
 
         _cut = new KilometerUmrechner(eingabeKilometer);
 
+
         // Test für englische Meilen
         ergebnisDouble = _cut.getMeilenEnglisch();
         ergebnisString = _cut.getMeilenEnglischAlsString();
 
-        Assert.assertTrue( ergebnisString.startsWith( ergebnisDouble + "" ) );
+        Assert.assertTrue( ergebnisString.startsWith( (int) ergebnisDouble + "" ) );
 
 
         // Test für nautische Meilen
         ergebnisDouble = _cut.getMeilenNautisch();
         ergebnisString = _cut.getMeilenNautischAlsString();
 
-        Assert.assertTrue( ergebnisString.startsWith( ergebnisDouble + "" ) );
+        Assert.assertTrue( ergebnisString.startsWith( (int) ergebnisDouble + "" ) );
 
 
         // Test für chinesische Meilen
         ergebnisDouble = _cut.getMeilenChinesisch();
         ergebnisString = _cut.getMeilenChinesischAlsString();
 
-        Assert.assertTrue( ergebnisString.startsWith( ergebnisDouble + "" ) );
+        Assert.assertTrue( ergebnisString.startsWith( (int) ergebnisDouble + "" ) );
     }
 
 }
