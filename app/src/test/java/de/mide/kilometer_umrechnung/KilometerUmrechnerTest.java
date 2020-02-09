@@ -19,33 +19,10 @@ public class KilometerUmrechnerTest {
 
     /**
      * Tests für Aufruf Konstruktor der Klasse KilometerUmrechner mit unzulässigem
-     * Double-Wert.
-     */
-    @Test
-    public void illegalerKilometerWertDouble() {
-
-        try {
-            _cut = new KilometerUmrechner(0);
-
-            Assert.fail("Keine Exception für Konstruktor-Aufruf mit null als Argument.");
-        }
-        catch (Exception ex) { /* Erwartete Exception wurde gefangen. */ }
-
-        try {
-            _cut = new KilometerUmrechner(-1);
-
-            Assert.fail("Keine Exception für Konstruktor-Aufruf mit negativen Wert als Argument.");
-        }
-        catch (Exception ex) { /* Erwartete Exception wurde gefangen. */ }
-    }
-
-
-    /**
-     * Tests für Aufruf Konstruktor der Klasse KilometerUmrechner mit unzulässigem
      * String-Wert.
      */
     @Test
-    public void illegalerKilometerWertString() {
+    public void illegalerKilometerWert() {
 
         try {
             _cut = new KilometerUmrechner("");
@@ -81,7 +58,7 @@ public class KilometerUmrechnerTest {
         final double eingabeKilometer   = 12.3;
         final double erwartetesErgebnis = 12.3 * 1.609344;
 
-        _cut = new KilometerUmrechner(eingabeKilometer);
+        _cut = new KilometerUmrechner(eingabeKilometer + "");
 
 
         // Aufruf Methode under Test
@@ -112,7 +89,7 @@ public class KilometerUmrechnerTest {
         final double eingabeKilometer   = 12.3;
         final double erwartetesErgebnis = 12.3 * 1.852;
 
-        _cut = new KilometerUmrechner(eingabeKilometer);
+        _cut = new KilometerUmrechner(eingabeKilometer + "");
 
 
         // Aufruf Methode under Test
@@ -143,7 +120,7 @@ public class KilometerUmrechnerTest {
         final double eingabeKilometer   = 12.3;
         final double erwartetesErgebnis = 12.3 * 0.5;
 
-        _cut = new KilometerUmrechner(eingabeKilometer);
+        _cut = new KilometerUmrechner(eingabeKilometer + "");
 
 
         // Aufruf Methode under Test
@@ -176,7 +153,7 @@ public class KilometerUmrechnerTest {
         double ergebnisDouble = 0.0;
         String ergebnisString = "";
 
-        _cut = new KilometerUmrechner(eingabeKilometer);
+        _cut = new KilometerUmrechner(eingabeKilometer + "");
 
 
         // Test für englische Meilen

@@ -34,24 +34,6 @@ public class KilometerUmrechner {
 
 
     /**
-     * Konstruktor um umzurechnende Anzahl Kilometer zu setzen.
-     *
-     * @param kilometer  Kilometer, die in Meilen umgerechnet werden sollen.
-     *
-     * @throws KilometerException  Ungültiger Kilometer-Wert
-     */
-    public KilometerUmrechner(double kilometer) throws KilometerException {
-
-        if (kilometer <= 0.0) {
-
-            throw new KilometerException("Unzulässiger Kilometer-Wert " + kilometer);
-        }
-
-        _kilometer = kilometer;
-    }
-
-
-    /**
      * Konstruktor um umzurechnende Anzahl Kilometer als String zu setzen.
      *
      * @param kilometerStr  Kilometer-Wert, der umgerechnet werden soll,
