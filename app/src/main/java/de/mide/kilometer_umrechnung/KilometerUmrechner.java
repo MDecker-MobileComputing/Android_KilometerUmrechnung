@@ -1,9 +1,6 @@
 package de.mide.kilometer_umrechnung;
 
 
-import java.text.DecimalFormat;
-
-
 /**
  * Diese Klasse beinhaltet die Logik für die eigentliche Umrechnung von Kilometern
  * in Meilen.
