@@ -21,6 +21,9 @@ import org.junit.runner.RunWith;
 
 /**
  * Instrumented Tests (d.h. laufen im Emulator oder auf Gerät) mit "Espresso".
+ * <br><br>
+ *
+ * This file is licensed under the terms of the BSD 3-Clause License.
  *
  * @link https://developer.android.com/training/testing/espresso
  * @link https://developer.android.com/reference/android/support/test/espresso/matcher/ViewMatchers
