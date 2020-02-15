@@ -59,6 +59,7 @@ public class MainActivityInstrumentedTest {
         // Auf Button "Umrechnen" klicken
         onView( withId(R.id.umrechnenButton) ).perform( click() );
 
+
         // Kontrollieren, ob Dialog mit Ergebnis angezeigt wird
         onView( withText("Ergebnis") ).check( matches(isDisplayed()) );
 
@@ -91,6 +92,7 @@ public class MainActivityInstrumentedTest {
 
         // Auf Button "Umrechnen" klicken
         onView( withId(R.id.umrechnenButton) ).perform( click() );
+
 
         // Kontrollieren, ob Dialog mit Ergebnis angezeigt wird
         onView( withText("Ergebnis") ).check( matches(isDisplayed()) );
@@ -125,6 +127,7 @@ public class MainActivityInstrumentedTest {
         // Auf Button "Umrechnen" klicken
         onView( withId(R.id.umrechnenButton) ).perform( click() );
 
+        
         // Kontrollieren, ob Dialog mit Ergebnis angezeigt wird
         onView( withText("Ergebnis") ).check( matches(isDisplayed()) );
 
