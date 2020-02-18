@@ -56,7 +56,7 @@ public class KilometerUmrechnerTest {
     public void happypath_englischeMeilen() throws KilometerException {
 
         final double eingabeKilometer   = 12.3;
-        final double erwartetesErgebnis = 12.3 * 1.609344;
+        final double erwartetesErgebnis = 12.3 / 1.609344;
 
         _cut = new KilometerUmrechner(eingabeKilometer + "");
 
@@ -76,7 +76,7 @@ public class KilometerUmrechnerTest {
     public void happypath_nautischeMeilen() throws KilometerException {
 
         final double eingabeKilometer   = 12.3;
-        final double erwartetesErgebnis = 12.3 * 1.852;
+        final double erwartetesErgebnis = 12.3 / 1.852;
 
         _cut = new KilometerUmrechner(eingabeKilometer + "");
 
@@ -96,7 +96,7 @@ public class KilometerUmrechnerTest {
     public void happypath_chinesischeMeilen() throws KilometerException {
 
         final double eingabeKilometer   = 12.3;
-        final double erwartetesErgebnis = 12.3 * 0.5;
+        final double erwartetesErgebnis = 12.3 / 0.5;
 
         _cut = new KilometerUmrechner(eingabeKilometer + "");
 
