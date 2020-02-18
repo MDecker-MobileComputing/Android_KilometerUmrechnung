@@ -65,7 +65,7 @@ public class KilometerUmrechner {
      */
     public double getMeilenEnglisch() {
 
-        return _kilometer * UMRECHNUNGSFAKTOR_MEILEN_ENGLISCH;
+        return _kilometer / UMRECHNUNGSFAKTOR_MEILEN_ENGLISCH;
     }
 
 
@@ -87,7 +87,7 @@ public class KilometerUmrechner {
      */
     public double getMeilenNautisch() {
 
-        return _kilometer * UMRECHNUNGSFAKTOR_MEILEN_NAUTISCH;
+        return _kilometer / UMRECHNUNGSFAKTOR_MEILEN_NAUTISCH;
     }
 
 
@@ -109,7 +109,7 @@ public class KilometerUmrechner {
      */
     public double getMeilenChinesisch() {
 
-        return _kilometer * UMRECHNUNGSFAKTOR_MEILEN_CHINESISCH;
+        return _kilometer / UMRECHNUNGSFAKTOR_MEILEN_CHINESISCH;
     }
 
 
