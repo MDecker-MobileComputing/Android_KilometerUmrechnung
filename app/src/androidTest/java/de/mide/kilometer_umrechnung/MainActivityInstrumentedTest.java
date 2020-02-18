@@ -67,7 +67,7 @@ public class MainActivityInstrumentedTest {
         onView( withText("Ergebnis") ).check( matches(isDisplayed()) );
 
         // Ergebnis-Wert nur auf erste Nachkommastelle prüfen
-        onView( withSubstring( "16.9") ).check( matches(isDisplayed()) );
+        onView( withSubstring("6.52") ).check( matches(isDisplayed()) );
 
 
         // Dialog durch Klick auf Button "Zur Kenntnis genommen" schließen
@@ -101,7 +101,7 @@ public class MainActivityInstrumentedTest {
         onView( withText("Ergebnis") ).check( matches(isDisplayed()) );
 
         // Ergebnis-Wert nur auf erste Nachkommastelle prüfen
-        onView( withSubstring( "19.4") ).check( matches(isDisplayed()) );
+        onView( withSubstring("5.67") ).check( matches(isDisplayed()) );
 
 
         // Dialog durch Klick auf Button "Zur Kenntnis genommen" schließen
@@ -135,7 +135,7 @@ public class MainActivityInstrumentedTest {
         onView( withText("Ergebnis") ).check( matches(isDisplayed()) );
 
         // Ergebnis-Wert nur auf erste Nachkommastelle prüfen
-        onView( withSubstring( "5.2") ).check( matches(isDisplayed()) );
+        onView( withSubstring("21.0") ).check( matches(isDisplayed()) );
 
 
         // Dialog durch Klick auf Button "Zur Kenntnis genommen" schließen
