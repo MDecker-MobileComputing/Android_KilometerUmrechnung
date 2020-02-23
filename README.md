@@ -7,6 +7,10 @@ The purpose of the app is to demonstrate different approaches for automatic test
 
 <br>
 
+There is also variant of this app as hybrid app with [Ionic](https://ionicframework.com), see [this repository](https://github.com/MDecker-MobileComputing/Ionic_KilometerUmrechnung).
+
+<br>
+
 ----
 
 # Screenshot #
