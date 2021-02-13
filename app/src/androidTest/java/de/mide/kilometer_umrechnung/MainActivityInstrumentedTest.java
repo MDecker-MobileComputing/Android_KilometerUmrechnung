@@ -21,6 +21,8 @@ import org.junit.runner.RunWith;
 
 /**
  * Instrumented Tests (d.h. laufen im Emulator oder auf Gerät) mit "Espresso".
+ * In Emulator muss Sprache "Englisch" eingestellt sein, damit als Dezimaltrenner
+ * "." statt "," verwendet wird.
  * <br><br>
  *
  * This file is licensed under the terms of the BSD 3-Clause License.
