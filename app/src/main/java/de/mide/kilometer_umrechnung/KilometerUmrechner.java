@@ -3,7 +3,7 @@ package de.mide.kilometer_umrechnung;
 
 /**
  * Diese Klasse beinhaltet die Logik für die eigentliche Umrechnung von Kilometern
- * in Meilen.
+ * in Meilen. Diese Klasse hat keine Android-spezifischen Abhängigkeiten.
  * <br><br>
  *
  * This file is licensed under the terms of the BSD 3-Clause License.
