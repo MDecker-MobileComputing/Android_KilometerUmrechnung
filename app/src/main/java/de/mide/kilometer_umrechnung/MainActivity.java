@@ -4,9 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.os.Bundle;
-import android.view.inputmethod.InputMethodManager;
 import android.view.View;
-import android.app.Activity;
 import android.widget.EditText;
 import android.widget.RadioButton;
 
