@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
         try {
 
-            KilometerUmrechner umrechner = new KilometerUmrechner(eingabeStr);
+            KilometerUmrechner umrechner = new KilometerUmrechner(eingabeStr); // throws KilometerException
 
             String ergebnisStr = "";
 
