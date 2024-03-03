@@ -2,7 +2,8 @@ package de.mide.kilometer_umrechnung;
 
 
 /**
- * Eigene Exception-Klasse; ein Exception-Objekt dieser Klasse ist zu werfen wenn
+ * Eigene Exception-Klasse; ein Exception-Objekt dieser Klasse wird bei
+ * ungültigen Eingaben geworfen.
  *
  * <br><br>
  *
