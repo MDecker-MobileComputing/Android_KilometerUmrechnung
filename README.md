@@ -3,7 +3,7 @@
 <br>
 
 This repository contains an Android Studio project for a simple native Android app that can convert 
-Kilometers to Englisch miles, nautical miles or chinese miles.
+Kilometers to English miles, nautical miles or Chinese miles.
 The purpose of the app is to demonstrate different approaches for automatic testing, namely:
 * Unit Tests with [JUnit4](https://junit.org/junit4/), 
   see class [KilometerUmrechnerTest.java](app/src/test/java/de/mide/kilometer_umrechnung/KilometerUmrechnerTest.java)

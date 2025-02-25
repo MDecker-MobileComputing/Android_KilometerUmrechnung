@@ -11,7 +11,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.withSubstring;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 
-import androidx.test.rule.ActivityTestRule;
+import androidx.test.ext.junit.rules.ActivityScenarioRule;
 
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import org.junit.Rule;
@@ -23,29 +23,16 @@ import org.junit.runner.RunWith;
  * Instrumented Tests (d.h. laufen im Emulator oder auf Gerät) mit "Espresso".
  * In Emulator muss Sprache "Englisch" eingestellt sein, damit als Dezimaltrenner
  * "." statt "," verwendet wird.
- * <br><br>
- *
- * This file is licensed under the terms of the BSD 3-Clause License.
- *
- * @link https://developer.android.com/training/testing/espresso
- * @link https://developer.android.com/reference/android/support/test/espresso/matcher/ViewMatchers
- * @link https://developer.android.com/reference/androidx/test/espresso/action/ViewActions
  */
 @RunWith(AndroidJUnit4.class)
 public class MainActivityInstrumentedTest {
 
     /**
-     * Mit einer JUnit Rule kann man bestimmte Dinge vor oder nach der Ausführung einer Testmethode
-     * ausführen lassen. Die hier verwendete ActivityTestRule sorgt dafür, dass die MainActivity
-     * vor jeder Testmethode gestartet wird.
-     * <br><br>
-     *
-     * Damit die ActivityTestRule gefunden wird muss die folgende Zeile im Block dependencies{} in der
-     * Datei app/build.gradle eingetragen werden: androidTestImplementation 'androidx.test:rules:1.1.0'
+     * MainActivity vor jeder Testmethode sichtbar machen.
      */
     @Rule
-    public ActivityTestRule<MainActivity> activityTestRule = new ActivityTestRule<>(MainActivity.class);
-
+    public ActivityScenarioRule<MainActivity> activityScenarioRule =
+                                    new ActivityScenarioRule<>(MainActivity.class);
 
     /**
      * In dieser Testmethode werden 10.5km in englische Meilen umgerechnet.
@@ -132,7 +119,7 @@ public class MainActivityInstrumentedTest {
         // Auf Button "Umrechnen" klicken
         onView( withId(R.id.umrechnenButton) ).perform( click() );
 
-        
+
         // Kontrollieren, ob Dialog mit Ergebnis angezeigt wird
         onView( withText("Ergebnis") ).check( matches(isDisplayed()) );
 
@@ -168,5 +155,6 @@ public class MainActivityInstrumentedTest {
         // Dialog muss jetzt verschwunden sein
         onView( withText("Ungültige Eingabe") ).check( doesNotExist() );
     }
+
 
 }
