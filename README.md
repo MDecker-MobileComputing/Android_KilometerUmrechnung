@@ -2,18 +2,14 @@
 
 <br>
 
-This repository contains an Android Studio project for a simple native Android app that can convert 
-Kilometers to English miles, nautical miles or Chinese miles.
-The purpose of the app is to demonstrate different approaches for automatic testing, namely:
-* Unit Tests with [JUnit4](https://junit.org/junit4/), 
-  see class [KilometerUmrechnerTest.java](app/src/test/java/de/mide/kilometer_umrechnung/KilometerUmrechnerTest.java)
-* UI Tests with [Espresso](https://developer.android.com/training/testing/espresso/), 
-  see class [MainActivityInstrumentedTest.java](app/src/androidTest/java/de/mide/kilometer_umrechnung/MainActivityInstrumentedTest.java)
+Dieses Repository enthält ein Android-Studio-Projekt für eine einfache native Android-App, die Kilometer in englische Meilen, nautische Meilen oder chinesische Meilen umrechnen kann.  
+Der Zweck der App ist es, verschiedene Ansätze für automatisches Testen zu demonstrieren, nämlich:
+* Unit-Tests mit [JUnit4](https://junit.org/junit4/), siehe Klasse [KilometerUmrechnerTest.java](app/src/test/java/de/mide/kilometer_umrechnung/KilometerUmrechnerTest.java)  
+* UI-Tests mit [Espresso](https://developer.android.com/training/testing/espresso/), siehe Klasse [MainActivityInstrumentedTest.java](app/src/androidTest/java/de/mide/kilometer_umrechnung/MainActivityInstrumentedTest.java)  
 
 <br>
 
-There is also variant of this app as hybrid app with [Ionic](https://ionicframework.com), 
-see [this repository](https://github.com/MDecker-MobileComputing/Ionic_KilometerUmrechnung).
+Es gibt auch eine Variante dieser App als Hybrid-App mit [Ionic](https://ionicframework.com), siehe [dieses Repository](https://github.com/MDecker-MobileComputing/Ionic_KilometerUmrechnung).
 
 <br>
 
